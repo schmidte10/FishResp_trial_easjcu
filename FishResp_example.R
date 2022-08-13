@@ -3,7 +3,7 @@ library(tidyverse)
 library(FishResp) 
 
 #--- set working directory ---# 
-setwd("C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp")
+setwd("[YOUR WORKING DIRECTORY]")
 
 #--- experiment information ---# 
 # Fish mass (kg)
@@ -22,8 +22,8 @@ Fish.ID = c(Fish1.ID,Fish2.ID,Fish3.ID,Fish4.ID)
 Chamber.volume = rep(1.5, 4)
 
 #--- get path to date files ---# 
-pyroscience.path = "C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 11 37AM/Oxygen data raw/Firesting.txt"
-aquaresp.path = "C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 11 37AM/Summary data resp 4.txt"
+pyroscience.path = "[PATH TO]/Experiment_ 01 August 2022 11 37AM/Oxygen data raw/Firesting.txt"
+aquaresp.path = "[PATH TO]/Experiment_ 01 August 2022 11 37AM/Summary data resp 4.txt"
 
 #--- convert data file type ---# 
 # data file will be saved in the working directory
@@ -52,8 +52,8 @@ info <- input.info(DO.unit = "mg/L",
 
 #--- load files containing background respiration ---# 
 # remember that you will first have to convert the file type to make FishResp happy
-pyroscience.pre.path = "C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 09 19AM/Oxygen data raw/Firesting.txt"
-aquaresp.pre.path = "C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 09 19AM/Summary data resp 4.txt"
+pyroscience.pre.path = "[PATH TO]/Experiment_ 01 August 2022 09 19AM/Oxygen data raw/Firesting.txt"
+aquaresp.pre.path = "[PATH TO]/Experiment_ 01 August 2022 09 19AM/Summary data resp 4.txt"
 
 pyroscience.aquaresp(pyroscience.file = pyroscience.pre.path, 
                      aquaresp.file = aquaresp.pre.path, 
@@ -77,8 +77,8 @@ SMR.path = "C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/
 # you will need to know when measurments started and ended in the next chunk 
 # to automate this load in Cycle1 and as well as the last Cycle from each 
 # folder/date 
-cycle.first <- read.csv("C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 11 37AM/All slopes/Cycle_1.txt", sep=";") 
-cycle.last <- read.csv("C:/Users/jc527762/OneDrive - James Cook University/PhD dissertation/Data/Resp/Dell/Experiment_ 01 August 2022 11 37AM/All slopes/Cycle_33.txt", sep=";") 
+cycle.first <- read.csv("[PATH TO]/Experiment_ 01 August 2022 11 37AM/All slopes/Cycle_1.txt", sep=";") 
+cycle.last <- read.csv("[PATH TO]/Experiment_ 01 August 2022 11 37AM/All slopes/Cycle_33.txt", sep=";") 
 start.time <- cycle.first[1,1] 
 stop.time <- tail(cycle.last, n=1)[1]
  
