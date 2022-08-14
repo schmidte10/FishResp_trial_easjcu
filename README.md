@@ -4,7 +4,7 @@ This directory contains R script for calculating SMR of fish using the R package
 
 Details for the experiment performed are below: 
 
-Fish were swam in a separate swim tunnel for ten minutes (five minutes ramp up speed, five minutes at max. aerobic speed) at max. aerobic speed, which was determined as 
+Fish were swam in a separate swim tunnel for ten minutes (five minutes ramp up speed, five minutes at max. aerobic speed). Max. aerobic speed, which was determined as 
 the point where fish could just hold their position in the swim tunnel via pectoral swimming, but also had the option to engage in short bursts. If fish started to engage 
 in long bursts, the speed of the swim tunnel was brought down. After spending ten minutes in the swim tunnel, fish were immediately transfered to a respiratory chamber. 
 
